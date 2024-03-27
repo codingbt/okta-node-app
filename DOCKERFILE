@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR /okta-k8-app
+
+COPY . .
+
+RUN npm install
+
+EXPOSE 3000
+
+CMD exec npm start
